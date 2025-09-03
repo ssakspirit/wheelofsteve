@@ -54,6 +54,6 @@ execute if score .act global matches 601 if score .seq global matches 1..949 run
 execute unless score .act global matches ..0 run camera @a set minecraft:first_person
 execute unless score .act global matches ..0 run camera @a clear
 execute unless score .act global matches ..0 run hud @a reset
-# 중요: admin 태그가 있는 플레이어에게만 권한 부여 (블록 파괴 방지)
+# 중요: movement는 admin만, camera는 모든 플레이어에게 (블록 파괴 방지하면서 카메라는 허용)
 execute unless score .act global matches ..0 unless score .act global matches 401 run inputpermission set @a[tag=admin] movement enabled
-execute unless score .act global matches ..0 run inputpermission set @a[tag=admin] camera enabled
+execute unless score .act global matches ..0 run inputpermission set @a camera enabled
