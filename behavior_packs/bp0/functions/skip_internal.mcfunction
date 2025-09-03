@@ -51,7 +51,8 @@ execute if score .act global matches 601 if score .seq global matches 1..949 run
 execute if score .act global matches 601 if score .seq global matches 1..949 run tellraw @a {"rawtext":[{"text":"§6Finale Showdown 컷신을 스킵했습니다. 카운트다운이 시작됩니다."}]}
 
 # Force immediate cutscene cleanup - 권한 문제 해결
-execute unless score .act global matches ..0 run camera @a set minecraft:first_person
+execute unless score .act global matches ..0 unless score .act global matches 501 run camera @a set minecraft:first_person
+execute unless score .act global matches ..0 if score .act global matches 501 run camera @a set minecraft:third_person
 execute unless score .act global matches ..0 run camera @a clear
 execute unless score .act global matches ..0 run hud @a reset
 # 중요: movement는 admin만, camera는 모든 플레이어에게 (블록 파괴 방지하면서 카메라는 허용)
