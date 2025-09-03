@@ -70,6 +70,15 @@ This is a Minecraft Education Edition world titled "Wheel of Stevecoding (v3.0)"
 /function utility/tickingarea_remove
 ```
 
+**Cutscene Management:**
+```bash
+# Skip current cutscene (available for all players)
+/function skip
+
+# Show admin commands and current game status (admin only)
+/function utility/admin_commands
+```
+
 ## Version Control
 * Whenever code changes are made, you must record a one-line description with emoji in korean of the change in `.commit_message.txt` with Edit Tool.
    - Read `.commit_message.txt` first, and then Edit.

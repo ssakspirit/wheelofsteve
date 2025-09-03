@@ -14,5 +14,9 @@ tellraw @s[tag=admin] {"rawtext":[{"text":"§e/tp @s 0 30 0 §7- Lobby"}]}
 tellraw @s[tag=admin] {"rawtext":[{"text":"§e/tp @s -80 70 5088 §7- Elytra Game Area"}]}
 tellraw @s[tag=admin] {"rawtext":[{"text":"§e/tp @s 148 60 300 §7- Craft Game Area"}]}
 
+# Skip command information
+tellraw @s[tag=admin] {"rawtext":[{"text":"§6=== Skip Commands ==="}]}
+tellraw @s[tag=admin] {"rawtext":[{"text":"§e/function skip §7- Skip current cutscene (Available to all players)"}]}
+
 # Admin only message
 execute unless entity @s[tag=admin] run tellraw @s {"rawtext":[{"text":"§cThis command is only for admin observers."}]}
