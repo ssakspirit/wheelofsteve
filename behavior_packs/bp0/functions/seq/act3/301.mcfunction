@@ -105,6 +105,7 @@ execute if score .seq global matches 1160 run scoreboard objectives setdisplay s
 execute if score .seq global matches 1160 run summon rwm:timer -33 90 -97 0 0 rwm:timer_grid
 execute if score .seq global matches 1160 run /execute as @a run playsound record.creator @a[scores={team=1}] -33 90 -97 1 0.56 1
 execute if score .seq global matches 1160 run /execute as @a run playsound record.creator @a[scores={team=2}] -33 90 -97 1 0.56 1
+execute if score .seq global matches 1160 run /execute as @a run playsound record.creator @a[tag=admin] -33 90 -97 1 0.56 1
 execute if score .seq global matches 1160 run inputpermission set @a movement enabled
 
 # Clean up demo blocks from cutscene (for skip functionality)
