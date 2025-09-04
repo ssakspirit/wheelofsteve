@@ -4,6 +4,9 @@
 tellraw @a {"rawtext":[{"text":"§c게임이 강제 종료됩니다."}]}
 tellraw @a {"rawtext":[{"text":"§e"},{"selector":"@s"},{"text":"§6님이 게임을 중단했습니다."}]}
 
+# Stop all background music and sounds
+stopsound @a
+
 # Stop active game scoring by resetting .game to 0
 scoreboard players set .game global 0
 
