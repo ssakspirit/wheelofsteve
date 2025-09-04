@@ -108,6 +108,8 @@ execute if score .seq global matches 1200 run inputpermission set @a movement en
 execute if score .seq global matches 1200 run function utility/games/craft/random_next_diagram_singleplayer_team1
 execute if score .seq global matches 1200 run function utility/games/craft/random_next_diagram_singleplayer_team2
 execute if score .seq global matches 1200 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
+execute if score .seq global matches 1220 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
+execute if score .seq global matches 1240 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 execute if score .seq global matches 3900 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 execute if score .seq global matches 6600 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 

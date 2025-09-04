@@ -153,6 +153,8 @@ execute if score .seq global matches 2180 run /function utility/games/craft/rand
 execute if score .seq global matches 2200 run execute as @e[tag=contraption_team1,c=1,x=-6,y=61,z=3035] run function utility/games/craft/random_next_diagram_multiplayer
 execute if score .seq global matches 2200 run execute as @e[tag=contraption_team2,c=1,x=6,y=61,z=3035] run function utility/games/craft/random_next_diagram_multiplayer
 execute if score .seq global matches 2200 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
+execute if score .seq global matches 2220 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
+execute if score .seq global matches 2240 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 execute if score .seq global matches 4900 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 execute if score .seq global matches 7600 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
 
