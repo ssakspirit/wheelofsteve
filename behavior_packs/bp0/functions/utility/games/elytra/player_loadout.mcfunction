@@ -15,4 +15,5 @@ replaceitem entity @a[tag=!admin] slot.hotbar 8 firework_rocket 64 0 {"item_lock
 
 # Admin observers: Clear items and add invisibility
 clear @a[tag=admin]
+clear @a[tag=admin] tnt
 effect @a[tag=admin] invisibility 999999 0 true
