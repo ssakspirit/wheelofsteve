@@ -33,9 +33,6 @@ execute if score .act global matches 202 if score .seq global matches 1..2099 ru
 ## Act 3 - Grid Wars Cutscene (카운트다운 직전으로)
 execute if score .act global matches 301 if score .seq global matches 1..1099 run scoreboard players set .seq global 1090
 execute if score .act global matches 301 if score .seq global matches 1..1099 run tellraw @a {"rawtext":[{"text":"§6Grid Wars 컷신을 스킵했습니다. 카운트다운이 시작됩니다."}]}
-execute if score .act global matches 301 if score .seq global matches 1..1099 run fill -46 61 -79 -43 64 -79 air destroy
-execute if score .act global matches 301 if score .seq global matches 1..1099 run fill -24 61 -79 -21 64 -79 air destroy
-execute if score .act global matches 301 if score .seq global matches 1..1099 run kill @e[type=item]
 
 ## Act 4 - Nock it Off Cutscene (카운트다운 직전으로)
 execute if score .act global matches 401 if score .seq global matches 1..539 run scoreboard players set .seq global 539
