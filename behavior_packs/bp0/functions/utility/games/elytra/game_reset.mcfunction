@@ -16,7 +16,7 @@ spawnpoint @a[scores={team=1}] -130 164 5087
 spawnpoint @a[scores={team=2}] -31 164 5087
 tp @a[scores={team=1}] -130 164 5087 -90 0
 tp @a[scores={team=2}] -31 164 5087 90 0
-tp @a[tag=admin] -80 180 5087 0 0
+tp @a[tag=admin] -80 180 5100 0 0
 tp @r[scores={team=1},x=-130,y=164,z=5087,r=1] -133 164 5088 -90 0
 tp @r[scores={team=1},x=-130,y=164,z=5087,r=1] -133 164 5087 -90 0
 tp @r[scores={team=1},x=-130,y=164,z=5087,r=1] -133 164 5089 -90 0
