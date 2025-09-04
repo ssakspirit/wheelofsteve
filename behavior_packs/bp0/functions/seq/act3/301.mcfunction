@@ -108,10 +108,10 @@ execute if score .seq global matches 1160 run /execute as @a run playsound recor
 execute if score .seq global matches 1160 run /execute as @a run playsound record.creator @a[tag=admin] -33 90 -97 1 0.56 1
 execute if score .seq global matches 1160 run inputpermission set @a movement enabled
 
-# Clean up demo blocks from cutscene (3 seconds after countdown ends)
-execute if score .seq global matches 1220 run fill -46 61 -79 -43 64 -79 air destroy
-execute if score .seq global matches 1220 run fill -24 61 -79 -21 64 -79 air destroy
-execute if score .seq global matches 1220 run kill @e[type=item]
+# Clean up demo blocks from cutscene (5 seconds after countdown ends)
+execute if score .seq global matches 1260 run fill -46 61 -79 -43 64 -79 air destroy
+execute if score .seq global matches 1260 run fill -24 61 -79 -21 64 -79 air destroy
+execute if score .seq global matches 1260 run kill @e[type=item]
 
 execute if score .seq global matches 1160 run /function utility/games/grid/new_pattern
 
