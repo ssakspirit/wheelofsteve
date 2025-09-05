@@ -29,7 +29,7 @@ execute if score .act global matches 0 run function utility/lobby/detect_host_pl
 
 # 게임 모드 설정
 execute if score .act global matches 0 run gamemode adventure @a[tag=!admin]
-execute if score .act global matches 0 run gamemode spectator @a[tag=admin]
+execute if score .act global matches 0 run gamemode creative @a[tag=admin]
 
 # Admin 관찰자 장비 재지급
 execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.head 0 golden_helmet 1 0 {"item_lock": {"mode": "lock_in_slot"}}
