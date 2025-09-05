@@ -29,6 +29,8 @@ execute if score .act global matches 201 if score .seq global matches 1..1099 ru
 
 execute if score .act global matches 202 if score .seq global matches 1..2099 run scoreboard players set .seq global 2100
 execute if score .act global matches 202 if score .seq global matches 1..2099 run tellraw @a {"rawtext":[{"text":"§6Craft Off 라운드 2를 스킵했습니다. 카운트다운이 시작됩니다."}]}
+execute if score .act global matches 202 if score .seq global matches 2100 run function utility/games/craft/respawn_assets
+execute if score .act global matches 202 if score .seq global matches 2100 run function tagging/crafting_grid
 
 ## Act 3 - Grid Wars Cutscene (카운트다운 직전으로)
 execute if score .act global matches 301 if score .seq global matches 1..1099 run scoreboard players set .seq global 1090
@@ -38,10 +40,11 @@ execute if score .act global matches 301 if score .seq global matches 1090 run f
 ## Act 4 - Nock it Off Cutscene (카운트다운 직전으로)
 execute if score .act global matches 401 if score .seq global matches 1..539 run scoreboard players set .seq global 539
 execute if score .act global matches 401 if score .seq global matches 1..539 run tellraw @a {"rawtext":[{"text":"§6Nock it Off 컷신을 스킵했습니다. 카운트다운이 시작됩니다."}]}
-execute if score .act global matches 401 if score .seq global matches 1..539 run function utility/games/nock/player_loadout
-execute if score .act global matches 401 if score .seq global matches 1..539 run function utility/games/nock/upper_rail_active
-execute if score .act global matches 401 if score .seq global matches 1..539 run inputpermission set @a[tag=!admin] movement disabled
-execute if score .act global matches 401 if score .seq global matches 1..539 run inputpermission set @a[tag=!admin] camera disabled
+execute if score .act global matches 401 if score .seq global matches 539 run function utility/games/nock/respawn_targets
+execute if score .act global matches 401 if score .seq global matches 539 run function utility/games/nock/player_loadout
+execute if score .act global matches 401 if score .seq global matches 539 run function utility/games/nock/upper_rail_active
+execute if score .act global matches 401 if score .seq global matches 539 run inputpermission set @a[tag=!admin] movement disabled
+execute if score .act global matches 401 if score .seq global matches 539 run inputpermission set @a[tag=!admin] camera disabled
 
 ## Act 5 - Elytra Rumble Cutscene (카운트다운 직전으로 - 임시)
 execute if score .act global matches 501 if score .seq global matches 1..1099 run scoreboard players set .seq global 1090
