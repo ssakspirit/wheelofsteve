@@ -80,8 +80,8 @@ execute if score .seq global matches 600 run /execute as @a run playsound record
 execute if score .game_mode global matches 1 run execute if score .seq global matches 600 run inputpermission set @a movement enabled
 
 # Time mode adjustment - modify timer health after spawn
-execute if score .seq global matches 605 if score .time_mode global matches 1 run effect @e[type=rwm:timer] instant_damage 1 89 true
-execute if score .seq global matches 605 if score .time_mode global matches 2 run effect @e[type=rwm:timer] instant_damage 1 53 true
+execute if score .seq global matches 605 if score .time_mode global matches 1 run event entity @e[type=rwm:timer] rwm:timer_nock_time_50
+execute if score .seq global matches 605 if score .time_mode global matches 2 run event entity @e[type=rwm:timer] rwm:timer_nock_time_70
 
 ### Active till Game Over
 execute if score .seq global matches 200..4160 run execute if score .tick10 global matches 1 run function utility/games/nock/random_creeper_target

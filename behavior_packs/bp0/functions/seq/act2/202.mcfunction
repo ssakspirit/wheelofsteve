@@ -148,8 +148,8 @@ execute if score .seq global matches 2200 run summon rwm:timer 0 90 3017 0 0 rwm
 execute if score .seq global matches 2200 run inputpermission set @a movement enabled
 
 # Time mode adjustment - modify timer health after spawn
-execute if score .seq global matches 2205 if score .time_mode global matches 1 run effect @e[type=rwm:timer] instant_damage 1 149 true
-execute if score .seq global matches 2205 if score .time_mode global matches 2 run effect @e[type=rwm:timer] instant_damage 1 89 true
+execute if score .seq global matches 2205 if score .time_mode global matches 1 run event entity @e[type=rwm:timer] rwm:timer_time_50
+execute if score .seq global matches 2205 if score .time_mode global matches 2 run event entity @e[type=rwm:timer] rwm:timer_time_70
 execute if score .seq global matches 2120 run event entity @e[type=rwm:craft_diagram] rwm:despawn
 execute if score .seq global matches 2140 run /function utility/games/craft/random_contraption_break
 execute if score .seq global matches 2160 run /function utility/games/craft/random_contraption_break

@@ -122,6 +122,30 @@
                     "name": "§6Timer",
                     "hud_range": 100
                 }
+            },
+            "rwm:timer_50": {
+                "minecraft:health": {
+				    "value": 950,
+				    "max": 950
+			     }
+            },
+            "rwm:timer_70": {
+                "minecraft:health": {
+				    "value": 1330,
+				    "max": 1330
+			     }
+            },
+            "rwm:timer_nock_50": {
+                "minecraft:health": {
+				    "value": 555,
+				    "max": 555
+			     }
+            },
+            "rwm:timer_nock_70": {
+                "minecraft:health": {
+				    "value": 777,
+				    "max": 777
+			     }
             }
         },
 		"events": {
@@ -224,6 +248,62 @@
                         "rwm:timer_craft",
                         "rwm:timer_nock",
                         "rwm:timer_elytra"
+                    ]
+                }
+			},
+			"rwm:timer_time_50":{
+                "add":{
+                    "component_groups":[
+                        "rwm:timer_50"
+                    ]
+                },
+                "remove":{
+                    "component_groups":[
+                        "rwm:timer_70",
+                        "rwm:timer_nock_50",
+                        "rwm:timer_nock_70"
+                    ]
+                }
+			},
+			"rwm:timer_time_70":{
+                "add":{
+                    "component_groups":[
+                        "rwm:timer_70"
+                    ]
+                },
+                "remove":{
+                    "component_groups":[
+                        "rwm:timer_50",
+                        "rwm:timer_nock_50",
+                        "rwm:timer_nock_70"
+                    ]
+                }
+			},
+			"rwm:timer_nock_time_50":{
+                "add":{
+                    "component_groups":[
+                        "rwm:timer_nock_50"
+                    ]
+                },
+                "remove":{
+                    "component_groups":[
+                        "rwm:timer_50",
+                        "rwm:timer_70",
+                        "rwm:timer_nock_70"
+                    ]
+                }
+			},
+			"rwm:timer_nock_time_70":{
+                "add":{
+                    "component_groups":[
+                        "rwm:timer_nock_70"
+                    ]
+                },
+                "remove":{
+                    "component_groups":[
+                        "rwm:timer_50",
+                        "rwm:timer_70",
+                        "rwm:timer_nock_50"
                     ]
                 }
 			}
