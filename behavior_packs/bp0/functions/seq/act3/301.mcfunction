@@ -146,6 +146,7 @@ execute if score .seq global matches 7290 run execute if score "§4Team 1" score
 execute if score .seq global matches 7290 run scoreboard players set .subtitle.objective global 0
 ### Return to Lobby
 execute if score .seq global matches 7360 run function utility/lobby/return_to_lobby
+execute if score .seq global matches 7360 run stopsound @a
 execute if score .seq global matches 7360 run scoreboard players set "§4Team 1" score 0
 execute if score .seq global matches 7360 run scoreboard players set "§9Team 2" score 0
 execute if score .seq global matches 7360 run tag @a remove grid_player

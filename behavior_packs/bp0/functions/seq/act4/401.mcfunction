@@ -111,6 +111,7 @@ execute if score .seq global matches 4240 run scoreboard players set .subtitle.o
 ### Return to Lobby
 execute if score .seq global matches 4240 run /kill @e[type=rwm:nock_target]
 execute if score .seq global matches 4250 run function utility/lobby/return_to_lobby
+execute if score .seq global matches 4240 run stopsound @a
 execute if score .seq global matches 4240 run inputpermission set @a movement enabled
 execute if score .seq global matches 4240 run clear @a bow
 execute if score .seq global matches 4240 run clear @a arrow
