@@ -122,6 +122,9 @@ execute if score .seq global matches 1160 run /function utility/games/grid/new_p
 ### Active till Game Over
 execute if score .seq global matches 1160..7280 run /function utility/games/grid/game_tick_logic
 
+# Timer death detection - end game when timer dies
+execute if score .seq global matches 1160..7279 run execute unless entity @e[type=rwm:timer] run scoreboard players set .seq global 7280
+
 
 ### Game Over
 execute if score .seq global matches 7280 run scoreboard players set .actionbar.objective global 0

@@ -127,6 +127,9 @@ execute if score .seq global matches 1200..7200 run execute if score .tick globa
 execute if score .seq global matches 1200..7200 run execute if score .tick global matches 1 run execute if entity @e[type=item,x=10,y=61,z=3023,r=1] run particle rwm:craft_crafting 10 61 3023 
 execute if score .seq global matches 1200..7200 run execute if score .tick global matches 1 run execute as @e[type=rwm:craft_contraption,tag=!fixed]  run execute at @e[type=rwm:craft_contraption,tag=!fixed] run particle rwm:craft_contraption_broken ~ ~ ~
 
+# Timer death detection - end game when timer dies
+execute if score .seq global matches 1200..7199 run execute unless entity @e[type=rwm:timer] run scoreboard players set .seq global 7200
+
 ### Singleplayer Scoring
 execute if score .seq global matches 1950 run execute unless entity @a[scores={team=1}] run scoreboard players add "§4Team 1" score 1
 execute if score .seq global matches 1950 run execute unless entity @a[scores={team=2}] run scoreboard players add "§9Team 2" score 1

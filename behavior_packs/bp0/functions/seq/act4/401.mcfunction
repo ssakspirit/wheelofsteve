@@ -95,6 +95,9 @@ execute if score .seq global matches 600..4160 run execute if score .tick10 glob
 execute if score .seq global matches 600..4160 run execute if score .tick10 global matches 80 run execute if score .game_mode global matches 1 run execute unless entity @a[scores={team=2}] run scoreboard players add "§9Team 2" score 1
 execute if score .seq global matches 600..4160 run execute if score .tick10 global matches 180 run execute if score .game_mode global matches 1 run execute unless entity @a[scores={team=2}] run scoreboard players add "§9Team 2" score 2
 
+# Timer death detection - end game when timer dies
+execute if score .seq global matches 600..4159 run execute unless entity @e[type=rwm:timer] run scoreboard players set .seq global 4160
+
 ### Game Over
 execute if score .seq global matches 4160 run scoreboard players set .actionbar.objective global 0
 execute if score .seq global matches 4160 run /kill @e[type=rwm:timer]

@@ -104,6 +104,9 @@ execute if score .seq global matches 700..6820 run tag @e[tag=orb_flag_holder_co
 execute if score .seq global matches 700..6820 run scoreboard players reset @e[scores={orb_cooldown=60..}] orb_cooldown
 execute if score .seq global matches 700..6820 run execute if score .tick global matches 1 run execute at @e[type=rwm:orb_flag,tag=!held] run particle rwm:rainbow ~ ~ ~
 
+# Timer death detection - end game when timer dies
+execute if score .seq global matches 700..6819 run execute unless entity @e[type=rwm:timer] run scoreboard players set .seq global 6820
+
 ### Game Over
 execute if score .seq global matches 6820 run tag @a remove orb_flag_holder
 execute if score .seq global matches 6820 run scoreboard players set .actionbar.objective global 0
