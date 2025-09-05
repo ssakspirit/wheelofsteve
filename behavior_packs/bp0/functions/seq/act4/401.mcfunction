@@ -79,6 +79,10 @@ execute if score .seq global matches 600 run summon rwm:timer 0 90 4000 0 0 rwm:
 execute if score .seq global matches 600 run /execute as @a run playsound record.wait @a ~ ~ ~ 1 1.25
 execute if score .game_mode global matches 1 run execute if score .seq global matches 600 run inputpermission set @a movement enabled
 
+# Time mode adjustment - modify timer health after spawn
+execute if score .seq global matches 605 if score .time_mode global matches 1 run effect @e[type=rwm:timer] instant_damage 1 89 true
+execute if score .seq global matches 605 if score .time_mode global matches 2 run effect @e[type=rwm:timer] instant_damage 1 53 true
+
 ### Active till Game Over
 execute if score .seq global matches 200..4160 run execute if score .tick10 global matches 1 run function utility/games/nock/random_creeper_target
 execute if score .seq global matches 200..4160 run execute if score .tick10 global matches 101 run function utility/games/nock/random_enderman_target

@@ -88,6 +88,10 @@ execute if score .seq global matches 700 run scoreboard objectives setdisplay si
 ### At game start
 execute if score .seq global matches 700 run summon rwm:timer 0 90 1998 0 0 rwm:timer_orb
 execute if score .seq global matches 700 run inputpermission set @a movement enabled
+
+# Time mode adjustment - modify timer health after spawn
+execute if score .seq global matches 705 if score .time_mode global matches 1 run effect @e[type=rwm:timer] instant_damage 1 149 true
+execute if score .seq global matches 705 if score .time_mode global matches 2 run effect @e[type=rwm:timer] instant_damage 1 89 true
 execute if score .seq global matches 740 run /execute as @a run playsound record.pigstep @a 0 65 1998 0.5 2 0.5
 execute if score .seq global matches 2220 run /execute as @a run playsound record.pigstep @a 0 65 1998 0.5 2 0.5
 execute if score .seq global matches 3700 run /execute as @a run playsound record.pigstep @a 0 65 1998 0.5 2 0.5

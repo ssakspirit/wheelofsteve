@@ -105,6 +105,10 @@ execute if score .seq global matches 1200 run scoreboard objectives setdisplay s
 ### At game start (Difference Old 600 New 1200)
 execute if score .seq global matches 1200 run summon rwm:timer 0 90 3017 0 0 rwm:timer_craft
 execute if score .seq global matches 1200 run inputpermission set @a movement enabled
+
+# Time mode adjustment - modify timer health after spawn  
+execute if score .seq global matches 1205 if score .time_mode global matches 1 run effect @e[type=rwm:timer] instant_damage 1 159 true
+execute if score .seq global matches 1205 if score .time_mode global matches 2 run effect @e[type=rwm:timer] instant_damage 1 95 true
 execute if score .seq global matches 1200 run function utility/games/craft/random_next_diagram_singleplayer_team1
 execute if score .seq global matches 1200 run function utility/games/craft/random_next_diagram_singleplayer_team2
 execute if score .seq global matches 1200 run /execute as @a run playsound record.stal @a ~ ~ ~ 1 1.1
