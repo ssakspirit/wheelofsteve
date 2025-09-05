@@ -3,7 +3,6 @@
 
 # 로비가 아닌 경우 경고 메시지
 execute unless score .act global matches 0 run tellraw @s {"rawtext":[{"text":"§c게임 선택 로비에서만 reset 명령을 사용할 수 있습니다."}]}
-execute unless score .act global matches 0 run tellraw @s {"rawtext":[{"text":"§c현재 진행 중인 컷신이나 게임을 중단하려면 /function stop 명령을 사용하세요."}]}
 
 # 로비에서만 실행되는 초기화 로직
 execute if score .act global matches 0 run tellraw @a {"rawtext":[{"text":"§6게임이 초기화되었습니다. 팀을 다시 선택해주세요."}]}
