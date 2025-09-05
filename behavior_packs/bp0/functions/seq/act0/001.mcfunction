@@ -46,7 +46,7 @@ execute if score .seq global matches 1400 run scoreboard players set .run global
 
 
 ### Check for .host Player pressing Button
-execute if score .seq global matches 1400..1401 run execute if block -44 66 1018 stone_button ["button_pressed_bit"=true,"facing_direction"=5] run execute if entity @e[tag=.host,x=-44,y=66,z=1018,r=6] run scoreboard players set .run global 1
+execute if score .seq global matches 1400..1401 run execute if block -44 66 1018 stone_button ["button_pressed_bit"=true,"facing_direction"=5] run execute if entity @e[tag=.host,x=-44,y=66,z=1018,r=2] run scoreboard players set .run global 1
 
 execute if score .seq global matches 1405 run scoreboard players set .actionbar.objective global 018
 
@@ -54,7 +54,7 @@ execute if score .seq global matches 1424 run setblock -44 66 1018 polished_blac
 
 execute if score .seq global matches 1425 run scoreboard players set .run global 0
 
-execute if score .seq global matches 1425..1426 run execute if block -44 66 1018 polished_blackstone_button ["button_pressed_bit"=true,"facing_direction"=5] run execute if entity @e[tag=.host,x=-44,y=66,z=1018,r=6] run scoreboard players set .run global 1
+execute if score .seq global matches 1425..1426 run execute if block -44 66 1018 polished_blackstone_button ["button_pressed_bit"=true,"facing_direction"=5] run execute if entity @e[tag=.host,x=-44,y=66,z=1018,r=2] run scoreboard players set .run global 1
 
 
 
