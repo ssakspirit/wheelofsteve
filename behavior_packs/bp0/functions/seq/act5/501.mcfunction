@@ -130,6 +130,9 @@ execute if score .game_mode global matches 1 run execute if score .seq global ma
 execute if score .seq global matches 1160..7280 run execute if score "§4Team 1" score matches 10 run scoreboard players set .seq global 7280
 execute if score .seq global matches 1160..7280 run execute if score "§9Team 2" score matches 10 run scoreboard players set .seq global 7280
 
+# Time over detection - end game when time reaches 0
+execute if score .seq global matches 1160..7279 run execute if score "§eTime Remaining: " score matches ..0 run scoreboard players set .seq global 7280
+
 ### Game Over
 execute if score .seq global matches 7280 run scoreboard players set .actionbar.objective global 0
 execute if score .seq global matches 7280 run scoreboard players reset "§eTime Remaining: " score
