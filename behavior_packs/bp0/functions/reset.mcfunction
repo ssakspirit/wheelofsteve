@@ -20,8 +20,8 @@ execute if score .act global matches 0 run function utility/teams/teams_clear
 execute if score .act global matches 0 run tp @a[tag=!admin] -45 66 1018
 execute if score .act global matches 0 run tp @a[tag=admin] -45 71 1018
 
-# 인벤토리 정리 및 상태 초기화
-execute if score .act global matches 0 run clear @a
+# 인벤토리 정리 및 상태 초기화 (admin 제외)
+execute if score .act global matches 0 run clear @a[tag=!admin]
 execute if score .act global matches 0 run effect @a clear
 
 # 게임 선택 버튼 활성화 (호스트 감지 다시 시작)
@@ -31,11 +31,6 @@ execute if score .act global matches 0 run function utility/lobby/detect_host_pl
 execute if score .act global matches 0 run gamemode adventure @a[tag=!admin]
 execute if score .act global matches 0 run gamemode creative @a[tag=admin]
 
-# Admin 관찰자 장비 재지급
-execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.head 0 golden_helmet 1 0 {"item_lock": {"mode": "lock_in_slot"}}
-execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.chest 0 golden_chestplate 1 0 {"item_lock": {"mode": "lock_in_slot"}}
-execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.legs 0 golden_leggings 1 0 {"item_lock": {"mode": "lock_in_slot"}}
-execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.feet 0 golden_boots 1 0 {"item_lock": {"mode": "lock_in_slot"}}
 
 # 권한 및 UI 초기화
 execute if score .act global matches 0 run inputpermission set @a movement enabled
