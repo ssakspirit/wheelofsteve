@@ -5,6 +5,8 @@ execute if entity @a[x=-5,y=25,z=-5,dx=10,dy=10,dz=10,scores={team=1}] run score
 execute if entity @a[x=-5,y=25,z=-5,dx=10,dy=10,dz=10,scores={team=2}] run scoreboard players add .team2players global -1
 scoreboard players set @p[x=-5,y=25,z=-5,dx=10,dy=10,dz=10] team 0
 
+# Clear any conflicting tags first
+tag @p[x=-5,y=25,z=-5,dx=10,dy=10,dz=10,tag=!.host] remove .host
 tag @p[x=-5,y=25,z=-5,dx=10,dy=10,dz=10,tag=!.host] add .nothost
 
 execute if entity @a[x=-5,y=20,z=-5,dx=10,dy=4,dz=10,tag=.host] run tp @p[x=-5,y=25,z=-5,dx=10,dy=10,dz=10,tag=.nothost] 0 20 -2 0 0
