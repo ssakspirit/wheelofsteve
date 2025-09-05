@@ -1,6 +1,6 @@
-# Wheel of Stevecoding (v3.0)
+# Wheel of Stevecoding
 
-Minecraft Education Edition에서 플레이할 수 있는 다양한 미니게임이 포함된 인터랙티브 월드입니다.
+Minecraft Education 에서 플레이할 수 있는 다양한 미니게임이 포함된 인터랙티브 월드 Wheel of Steve를 대회에 맞게 수정 보완한 버전입니다. 
 
 ## 주요 기능
 
@@ -10,7 +10,7 @@ Minecraft Education Edition에서 플레이할 수 있는 다양한 미니게임
 
 - `/function time1` - 게임 시간을 50%로 단축 (빠른 게임)
 - `/function time2` - 게임 시간을 70%로 단축 (중간 게임)  
-- `/function time3` - 게임 시간을 100%로 설정 (기본 게임)
+- `/function time3` - 게임 시간을 100%로 설정 (기본 게임) -> 디폴트값
 
 **적용 게임:**
 - Orb Ambush (오브 매복)
@@ -18,20 +18,24 @@ Minecraft Education Edition에서 플레이할 수 있는 다양한 미니게임
 - Grid Wars (그리드 워즈)
 - Nock it Off (낙 잇 오프)
 - Elytra Rumble (딱지날개 럼블)
-- Finale Showdown (피날레 대결)
 
 ### 컷신 스킵 명령어
 
-모든 플레이어가 사용할 수 있는 컷신 스킵 기능:
+운영자 권한이 있는 모든 플레이어가 사용할 수 있는 컷신 스킵 기능:
 
 - `/function skip` - 현재 진행 중인 컷신을 건너뛰고 게임으로 바로 이동
+
+### 게임 종료 명령어
+
+운영자 권한이 있는 플레이어가 사용할 수 있는 컷신 스킵 기능:
+
+- `/function stop` - 현재 진행 중인 게임을 무승부로 하고 종료
 
 ### 관리자 명령어
 
 관리자 태그를 가진 플레이어만 사용 가능:
 
-- `/function admin` - 관리자 명령어 목록 표시
-- `/function utility/admin_commands` - 상세한 관리자 도구 접근
+- `/function admin` - 관찰자(운영자) 되는 명령어
 
 ## 게임 목록
 
