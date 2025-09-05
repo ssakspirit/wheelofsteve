@@ -31,6 +31,12 @@ execute if score .act global matches 0 run function utility/lobby/detect_host_pl
 execute if score .act global matches 0 run gamemode adventure @a[tag=!admin]
 execute if score .act global matches 0 run gamemode spectator @a[tag=admin]
 
+# Admin 관찰자 장비 재지급
+execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.head 0 golden_helmet 1 0 {"item_lock": {"mode": "lock_in_slot"}}
+execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.chest 0 golden_chestplate 1 0 {"item_lock": {"mode": "lock_in_slot"}}
+execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.legs 0 golden_leggings 1 0 {"item_lock": {"mode": "lock_in_slot"}}
+execute if score .act global matches 0 run replaceitem entity @a[tag=admin] slot.armor.feet 0 golden_boots 1 0 {"item_lock": {"mode": "lock_in_slot"}}
+
 # 권한 및 UI 초기화
 execute if score .act global matches 0 run inputpermission set @a movement enabled
 execute if score .act global matches 0 run inputpermission set @a camera enabled
