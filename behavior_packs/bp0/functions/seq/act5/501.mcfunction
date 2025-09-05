@@ -76,7 +76,10 @@ execute if score .seq global matches 02 run scoreboard objectives setdisplay sid
 execute if score .seq global matches 1160 run scoreboard objectives add score dummy §6§lScore
 execute if score .seq global matches 1160 run scoreboard players set "§4Team 1" score 0
 execute if score .seq global matches 1160 run scoreboard players set "§9Team 2" score 0
-execute if score .seq global matches 1160 run scoreboard players set "§eTime Remaining: " score 306
+execute if score .seq global matches 1160 if score .time_mode global matches 0 run scoreboard players set "§eTime Remaining: " score 306
+execute if score .seq global matches 1160 if score .time_mode global matches 1 run scoreboard players set "§eTime Remaining: " score 153
+execute if score .seq global matches 1160 if score .time_mode global matches 2 run scoreboard players set "§eTime Remaining: " score 214
+execute if score .seq global matches 1160 unless score .time_mode global matches 0..2 run scoreboard players set "§eTime Remaining: " score 306
 execute if score .seq global matches 1160..7280 run execute if score .tick global matches 1 run execute if score "§eTime Remaining: " score matches 1..6120 run scoreboard players add "§eTime Remaining: " score -1
 execute if score .seq global matches 1160 run scoreboard objectives setdisplay sidebar score
 
