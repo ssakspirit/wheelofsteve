@@ -112,10 +112,10 @@ execute if score .seq global matches 1160 run inputpermission set @a movement en
 execute if score .seq global matches 1165 if score .time_mode global matches 1 run event entity @e[type=rwm:timer] rwm:timer_time_50
 execute if score .seq global matches 1165 if score .time_mode global matches 2 run event entity @e[type=rwm:timer] rwm:timer_time_70
 
-# Clean up demo blocks from cutscene (5 seconds after countdown ends)
-execute if score .seq global matches 1260 run fill -46 61 -79 -43 64 -79 air destroy
-execute if score .seq global matches 1260 run fill -24 61 -79 -21 64 -79 air destroy
-execute if score .seq global matches 1260 run kill @e[type=item]
+# Clean up demo blocks from cutscene (7 seconds after countdown ends)
+execute if score .seq global matches 1300 run fill -46 61 -79 -43 64 -79 air destroy
+execute if score .seq global matches 1300 run fill -24 61 -79 -21 64 -79 air destroy
+execute if score .seq global matches 1300 run kill @e[type=item]
 
 execute if score .seq global matches 1160 run /function utility/games/grid/new_pattern
 
