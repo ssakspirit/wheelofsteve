@@ -5,7 +5,7 @@
 execute unless score .act global matches 0 run tellraw @s {"rawtext":[{"text":"§c게임 선택 로비에서만 reset 명령을 사용할 수 있습니다."}]}
 
 # 로비에서만 실행되는 초기화 로직
-execute if score .act global matches 0 run tellraw @a {"rawtext":[{"text":"§6게임이 초기화되었습니다. 팀을 다시 선택해주세요."}]}
+execute if score .act global matches 0 run tellraw @a {"rawtext":[{"text":"§6게임이 초기화되었습니다. 팀을 선택한 후 §e/function restart §6명령으로 게임을 시작하세요."}]}
 
 # 전체 게임 점수 초기화
 execute if score .act global matches 0 run scoreboard players set .team1wins global 0
